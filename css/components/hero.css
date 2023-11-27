@@ -1,0 +1,80 @@
+#hero {
+  background: linear-gradient(var(--blue) 0%, #19578d 50%, var(--lightblue) 100%);
+  padding-bottom: 32px;
+}
+
+#hero h1, h3 {
+  text-align: center;
+  font-weight: 300;
+}
+
+#hero h3 {
+  text-align: center;
+  font-weight: 400;
+}
+
+#hero h3 {
+  color: var(--purple);
+  text-shadow: 2px 1px black;
+}
+
+#hero-image {
+  background-image: linear-gradient(rgba(4, 26, 75, 0.5), rgba(91, 82, 153, 0.5)), url(../../images/graduation.jpg);
+  background-size: cover;
+  background-position: center;
+  /* height: 180px; */
+  height: 50vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+#hero-image h3 {
+  margin-bottom: 16px;
+}
+
+#hero-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#hero-text button {
+  width: 113px;
+  background-color: var(--dimlightblue);
+  border: none;
+  box-shadow: 0px 0px 4px white;
+}
+
+#hero-text button:hover {
+  background-color: var(--darkpurple);
+  box-shadow: none;
+}
+
+#christian-graduation {
+  height: 30vh;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 768px) {
+
+  #hero-image {
+    flex-direction: column;
+    height: 70vh;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  #hero-text {
+    /* width: 80%; */
+    width: 275px;
+  }
+}

@@ -1,0 +1,25 @@
+.footer {
+  height: 75px;
+  background-color:  rgba(4,28,100,0.6);
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+#socials a{
+  font-size: 50px;
+  margin: 0px auto;
+  color: var(--lightblue);
+  text-align: left;
+  padding: 12px;
+}
+
+#socials a:hover{
+  color: var(--purple);
+}
+
+.inline li, ul{
+  list-style: none;
+  display: inline;
+  padding-left: 0;
+}

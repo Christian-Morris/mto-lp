@@ -1,0 +1,9 @@
+#r {
+  background-color: white;
+  color: black;
+}
+
+.video{
+  width: 35vw;
+  padding-bottom: 1rem;
+}

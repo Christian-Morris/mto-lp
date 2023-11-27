@@ -1,0 +1,25 @@
+@import url('components/footer.css');
+@import url('components/navbar.css');
+@import url('components/hero.css');
+@import url('components/c.css');
+@import url('components/l.css');
+@import url('components/o.css');
+@import url('components/s.css');
+@import url('components/e.css');
+@import url('components/r.css');
+@import url('components/book_a_call_modal.css');
+@import url('components/about_us.css');
+
+:root {
+--blue: #041f60;
+--lightblue: #4de4ff;
+--dimlightblue: #3bb5d9;
+--purple: #a6b6f8;
+--darkpurple: #5b5299;
+}
+
+body {
+  background-color: var(--blue);
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}

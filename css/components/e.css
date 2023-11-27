@@ -1,0 +1,12 @@
+#e {
+  background: linear-gradient(var(--blue) 0%, #19578d 50%, var(--lightblue) 100%);
+  padding-bottom: 32px;
+}
+
+#e h2 {
+  color: white;
+}
+
+#e .fa-solid {
+  color: var(--lightblue);
+}

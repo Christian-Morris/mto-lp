@@ -1,0 +1,20 @@
+.embed-responsive-item {
+  width: 1000px;
+  height: 660px;
+}
+
+.modal-lg {
+  max-width:1025px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .embed-responsive-item {
+    width: 90vw;
+    height: 550px;
+  }
+
+  .modal-lg {
+    max-width:825px;
+  }
+}
