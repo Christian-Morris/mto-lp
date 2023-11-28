@@ -54,4 +54,12 @@
   .mobile-only {
     display: block;
   }
+
+  .mobile-no-col {
+    display: block;
+  }
+
+  .mobile-no-column-50 {
+    width: auto !important;
+  }
 }
