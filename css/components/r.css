@@ -5,5 +5,7 @@
 
 .video{
   width: 35vw;
-  padding-bottom: 1rem;
+  aspect-ratio: 16/9;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
 }
