@@ -9,3 +9,24 @@
   margin-bottom: 1rem;
   border-radius: 0.5rem;
 }
+
+@media screen and (max-width: 768px) {
+
+ #r h4 {
+  text-align: center;
+ }
+
+ .review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .video{
+  width: 90vw;
+ }
+
+ #r h4 {
+  font-size: 2rem;
+ }
+}
