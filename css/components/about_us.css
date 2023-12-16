@@ -50,6 +50,16 @@
     width: 100%;
   }
 
+  .tutor-card {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .tutor-card img {
+    transform: none;
+    margin-left: 0;
+  }
+
 }
 
 .caption {
