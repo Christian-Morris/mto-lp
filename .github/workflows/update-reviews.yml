@@ -24,7 +24,7 @@ jobs:
       - name: Fetch reviews and write JSON
         env:
           GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
-          PLACE_ID: "ChIJtlIiG7IiokcRzMSSvbxuwwU"   # <- your Place ID here
+          PLACE_ID: "ChIJtTLUoVviMwYRw81Fub1uw1k"   # <- your Place ID here
         run: node scripts/updateReviews.mjs
 
       - name: Commit and push changes
