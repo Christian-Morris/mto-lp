@@ -71,6 +71,34 @@
       </a>
     </div>
   </div>
+  <div id="google-reviews">
+    <div class="container reviews-section">
+      <div class="reviews-header">
+        <h2>What parents say about MT.O</h2>
+        <div class="reviews-summary">
+          <div class="reviews-stars">
+            ★★★★★
+          </div>
+          <p class="reviews-score">
+            Rated <strong>5.0 out of 5.0</strong> on Google Reviews
+          </p>
+        </div>
+      </div>
+      <div id="reviews-container" class="reviews-grid">
+        <!-- Cards will be injected here by JavaScript -->
+      </div>
+      <div class="reviews-footer">
+        <a id="reviews-link"
+          href="https://www.google.com/maps/place/Maths+Tutors+Online/@52.1739267,-3.1994142,7.61z/data=!4m8!3m7!1s0x633e25ba1d432b5:0x59c36ebdb945cdc3!8m2!3d47.73855!4d12.5088275!9m1!1b1!16s%2Fg%2F11vl5scr7q?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank"
+          rel="noopener">
+          Read all reviews on Google
+        </a>
+
+        <p class="reviews-updated" id="reviews-updated"></p>
+      </div>
+    </div>
+  </div>
   <div id="c">
     <div class="container">
       <h2 class="h2">Sound Familiar?</h2>
@@ -331,5 +359,109 @@
     </ul>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script> //To load google reviews
+  async function loadGoogleReviews() {
+    const container = document.getElementById('reviews-container');
+    const updatedEl = document.getElementById('reviews-updated');
+    const linkEl = document.getElementById('reviews-link');
+    const scoreEl = document.querySelector('.reviews-score'); // NEW
+
+    try {
+      const res = await fetch('/data/reviews.json', { cache: 'no-store' });
+
+      if (!res.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const data = await res.json();
+
+      container.innerHTML = '';
+
+      const reviews = (data.reviews || []).slice(0, 6); // show up to 6
+
+      if (!reviews.length) {
+        container.innerHTML = '<p>No reviews to display yet.</p>';
+        return;
+      }
+
+      reviews.forEach(review => {
+        const card = document.createElement('article');
+        card.className = 'review-card';
+
+        const rating = Number(review.rating) || 0;
+        const fullStars = '★'.repeat(rating);
+        const emptyStars = '☆'.repeat(5 - rating);
+
+        const fullText = (review.text || '').trim();
+
+        const words = fullText.split(/\s+/);
+        const maxWords = 40; // adjust if you want shorter or longer preview
+        const isLong = words.length > maxWords;
+        const shortText = isLong ? words.slice(0, maxWords).join(' ') + '…' : fullText;
+
+        card.innerHTML = `
+          <div class="review-header">
+            <div class="review-author">${review.author_name || 'Parent'}</div>
+            <div class="review-rating">${fullStars}${emptyStars}</div>
+          </div>
+          <p class="review-text">${shortText}</p>
+          ${
+            isLong
+              ? '<a href="#" class="review-more-link">Read more</a>'
+              : ''
+          }
+          <p class="review-meta">${review.relative_time_description || ''}</p>
+        `;
+
+        if (isLong) {
+          const link = card.querySelector('.review-more-link');
+          const textEl = card.querySelector('.review-text');
+          let expanded = false;
+
+          link.addEventListener('click', event => {
+            event.preventDefault();
+            expanded = !expanded;
+
+            textEl.textContent = expanded ? fullText : shortText;
+            link.textContent = expanded ? 'Show less' : 'Read more';
+            card.classList.toggle('expanded', expanded);
+          });
+        }
+
+        container.appendChild(card);
+      });
+
+
+
+      // ✅ Set "Read all X Google reviews"
+      if (linkEl) {
+        const total = Number(data.totalReviews);
+        if (!isNaN(total) && total > 0) {
+          linkEl.textContent = `Read all ${total} Google reviews`;
+        } else {
+          linkEl.textContent = 'Read all reviews on Google';
+        }
+      }
+
+      // ✅ Set "Rated 5.0 out of 5.0 on Google Reviews" dynamically
+      if (scoreEl) {
+        const avgRating = Number(data.rating);
+        const total = Number(data.totalReviews);
+        if (!isNaN(avgRating) && avgRating > 0 && !isNaN(total) && total > 0) {
+          const formatted = avgRating.toFixed(1);
+          scoreEl.innerHTML = `
+            Rated <strong>${formatted} out of 5.0</strong> from <strong>${total}</strong> Google Reviews
+          `;
+        }
+      }
+
+    } catch (err) {
+      console.error('Error loading reviews', err);
+      container.innerHTML = '<p>We could not load reviews right now. Please try again later.</p>';
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', loadGoogleReviews);
+</script>
 </body>
 </html>

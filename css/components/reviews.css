@@ -1,0 +1,137 @@
+#google-reviews {
+  background-color: white;
+  color: black;
+}
+
+.reviews-section {
+  padding: 0rem 1.5rem;
+  padding-top: 1rem;
+  margin-top: 4.57rem;
+  margin-bottom: -0.5rem;
+  background: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.reviews-header h2 {
+  font-size: 2rem;
+  color: #041f60;
+  margin-bottom: 0.5rem;
+}
+
+.reviews-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction:column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.reviews-stars {
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  color: #f5a623;
+  margin-top: -1rem;
+  margin-bottom: -1rem;
+}
+
+.reviews-score {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #3b3b3b;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.review-card {
+  background: linear-gradient(135deg, #f7fbff 0%, #ffffff 40%);
+  border-radius: 1rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 10px 25px rgba(4, 31, 96, 0.08);
+  border: 1px solid rgba(4, 31, 96, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.review-author {
+  font-weight: 600;
+  color: #041f60;
+  font-size: 0.98rem;
+}
+
+.review-rating {
+  font-size: 0.95rem;
+  color: #f5a623;
+  white-space: nowrap;
+}
+
+.review-text {
+  margin: 0.25rem 0 0.25rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333333;
+  max-height: 7.5rem; /* adjust to taste */
+  overflow: hidden;
+}
+
+/* Expanded state: show full text */
+.review-card.expanded .review-text {
+  max-height: none;
+}
+
+/* Read more link */
+.review-more-link {
+  align-self: flex-end;
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  color: #4de4ff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.review-meta {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.reviews-footer {
+  margin-top: 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.reviews-footer a {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #4de4ff;
+  text-decoration: none;
+}
+
+.reviews-footer a:hover {
+  text-decoration: underline;
+}
+
+.reviews-updated {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #6b7280;
+}

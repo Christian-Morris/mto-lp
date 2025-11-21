@@ -56,7 +56,7 @@
   background-color: #ffffff;
   position: absolute;
   width: 200%;
-  height: 5em;
+  height: 3em;
   bottom: 0;
   transform: skewY(-2deg);
 }
