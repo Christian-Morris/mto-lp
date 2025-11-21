@@ -1,8 +1,8 @@
 name: Update Google Reviews
 
 on:
-  schedule:
-    - cron: "0 */6 * * *"   # every 6 hours
+  # schedule: # commented out the schedule section so this doesn't run on a schedule as it's not working.
+    # - cron: "0 */6 * * *"   # every 6 hours
   workflow_dispatch:        # allow manual run from Actions tab
 
 jobs:
