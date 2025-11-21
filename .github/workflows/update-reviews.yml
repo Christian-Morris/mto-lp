@@ -1,0 +1,36 @@
+name: Update Google Reviews
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # every 6 hours
+  workflow_dispatch:        # allow manual run from Actions tab
+
+jobs:
+  update-reviews:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Fetch reviews and write JSON
+        env:
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+          PLACE_ID: "ChIJtlIiG7IiokcRzMSSvbxuwwU"   # <- your Place ID here
+        run: node scripts/updateReviews.mjs
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/reviews.json
+          git commit -m "Update Google reviews" || echo "No changes to commit"
+          git push
