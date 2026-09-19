@@ -1,467 +1,1202 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GCSE Maths 🚀 Confidence </title>
-  <meta name="description" content="The system let them down. Anxiety took over. Now? They’re thriving. GCSE students across the UK are reclaiming confidence with our in-house, qualified tutors — proven by 100+ 5⭐️ Google reviews and powerful video stories. Apply to see if you qualify.">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MathsTutors.Online — GCSE Maths tuition judged on the grade, not the hours</title>
+<meta name="description" content="Most tutoring bills by the hour and hopes for the best. We build a roadmap from a real diagnostic, teach it with GCSE Maths specialists, and mark a past-paper exam every six weeks so you can see it working. Students average a 3.3 grade jump.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mathstutors.online/">
+<meta property="og:title" content="GCSE Maths tuition judged on the grade, not the hours">
+<meta property="og:description" content="A roadmap built from a real diagnostic, GCSE Maths specialists, and a marked past-paper exam every six weeks. Students average a 3.3 grade jump.">
+<meta property="og:image" content="https://mathstutors.online/images/christian_graduation.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="images/mto-logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SE0MMX2Y45"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-SE0MMX2Y45');
 </script>
+
+<!-- Figures kept in one place so the hero bar and the wall can never disagree -->
+<script>
+  window.MTO_FIGURES = {
+    studentsHelped: 1426,
+    avgGradeJump: 3.3
+  };
+</script>
+</head>
 <body>
-  <div id="navbar">
-    <nav>
-      <div class="menu-icon align-items-center justify-content-center">
-        <i class="fa fa-bars btn" style="border: none;"  data-bs-toggle="modal" data-bs-target="#menuModal"></i>
-      </div>
-      <img src="/images/mto-logo.png" alt="Logo" width="100" height="100">
-      <div class="d-flex align-items-center">
-        <div id="nav-links" class="d-flex">
-          <li><a href="" data-bs-toggle="modal" data-bs-target="#bookACallModal">Create My Roadmap</a></li>
-          <li><a href="#socials">Socials</a></li>
-          <li><a href="#about-us">About Us</a></li>
-          <li><a href="#our-tutors">Our Tutors</a></li>
-          <li><a href="#our-founders">Our Student Success Team</a></li>
-        </div>
-        <button class="btn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookACallModal">Book a call</button>
+
+<!-- =====================================================  NAV  ========== -->
+<header id="navbar">
+  <div class="shell">
+    <nav aria-label="Main">
+      <a class="wordmark" href="#hero">Maths<span class="soft">Tutors</span>.Online</a>
+
+      <div class="nav-right">
+        <ul id="nav-links">
+          <li><a href="#o">Why tutoring stalls</a></li>
+          <li><a href="#r">Results</a></li>
+          <li><a href="#our-tutors">Our tutors</a></li>
+          <li><a href="#e">Questions</a></li>
+          <li><a href="#about-us">About us</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm nav-cta" href="https://api.leadconnectorhq.com/widget/booking/Pa7GsoBAeK1nIxCOvS9R" target="_blank" rel="noopener" data-modal-open>Create my roadmap</a>
+        <button class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+          <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true">
+            <path d="M0 1h20M0 7h20M0 13h20" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </button>
       </div>
     </nav>
   </div>
-    <div id="hero">
-    <div class="container">
-      <div id="hero-image">
-        <div id="hero-text">
-          <h1><span style="font-weight: 700;">Maths</span>Tutors<span style="color: #4de4ff;">.</span>Online</h1>
-          <h3>Building <em>better grades</em> and <em>lasting confidence</em> through <em>measurable results</em>!</h3>
-          <button class="btn" data-bs-toggle="modal" data-bs-target="#bookACallModal">Book a call</button>
+
+  <div id="mobile-menu" data-open="false">
+    <div class="shell">
+      <ul>
+        <li><a href="#o">Why tutoring stalls</a></li>
+        <li><a href="#r">Results</a></li>
+        <li><a href="#our-tutors">Our tutors</a></li>
+        <li><a href="#our-founders">Student success team</a></li>
+        <li><a href="#e">Questions</a></li>
+        <li><a href="#about-us">About us</a></li>
+      </ul>
+      <a class="btn btn--primary" href="https://api.leadconnectorhq.com/widget/booking/Pa7GsoBAeK1nIxCOvS9R" target="_blank" rel="noopener" data-modal-open style="width:100%">Create my roadmap</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================================  C — CLARIFY / HERO  ==== -->
+<section id="hero">
+  <div class="shell">
+    <div class="hero-grid">
+      <div>
+        <h1>
+          <span class="h1-line">Most tutoring bills you <em>by the hour</em>.</span>
+          <span class="h1-line">We&rsquo;d rather be judged <em>on the grade</em>.</span>
+        </h1>
+        <p class="hero-sub">
+          A roadmap built from a real diagnostic, taught by GCSE Maths specialists,
+          with a marked past-paper exam every six weeks so you can see exactly what's
+          moving. Our students average a 3.3 grade jump.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn--primary" href="https://api.leadconnectorhq.com/widget/booking/Pa7GsoBAeK1nIxCOvS9R" target="_blank" rel="noopener" data-modal-open>Create my roadmap</a>
+          <a class="btn btn--ghost" href="#o">See how this is different</a>
         </div>
-        <div>
-          <img src="images/christian_graduation.jpg" alt="Christian & Millie at Christian's graduation" id="christian-graduation">
+        <p class="hero-note">
+          For parents of GCSE Maths students in Years 9, 10 and 11. Every exam board.
+        </p>
+      </div>
+      <figure class="hero-photo" style="margin:0">
+        <img src="images/christian_graduation.webp" width="1200" height="900"
+             alt="Christian and Millie at Christian's graduation" fetchpriority="high">
+      </figure>
+    </div>
+  </div>
+
+  <!-- Proof, immediately below the fold -->
+  <div class="proofbar">
+    <div class="shell">
+      <div class="proofbar-grid">
+        <div class="stat">
+          <span class="stat-n">4.9<span class="unit">/5</span></span>
+          <span class="stat-l">Average Google rating</span>
         </div>
+        <div class="stat">
+          <span class="stat-n">162<span class="unit">+</span></span>
+          <span class="stat-l">Google reviews</span>
+        </div>
+        <div class="stat">
+          <span class="stat-n" id="barStudents">1,426<span class="unit">+</span></span>
+          <span class="stat-l">Students taught</span>
+        </div>
+        <div class="stat">
+          <span class="stat-n" id="barJump">+3.3<span class="unit">grades</span></span>
+          <span class="stat-l">Average grade jump</span>
+        </div>
+      </div>
+
+      <!-- Quoted verbatim, with the family's written consent. First name only. -->
+      <figure class="pullquote pullquote--onnavy">
+        <blockquote>
+          I&rsquo;m delighted to say James achieved an A grade. As you&rsquo;re aware James
+          was not only dealing with his cancer diagnosis but also a heart condition, so
+          this is a massive achievement for him.
+        </blockquote>
+        <figcaption>
+          <span class="pq-who">Debbie</span>
+          <span class="pq-role">James&rsquo;s mum</span>
+          <span class="pq-jump">Grade 3 &rarr; Grade 8 in six weeks</span>
+        </figcaption>
+        <p class="pq-context">
+          James missed five months of school during treatment. Six weeks after starting
+          with us, his marked past-paper scores had gone from a grade 3 to a grade 8. He
+          finished with an A.
+        </p>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================  DISQUALIFIER  ========== -->
+<section class="section" id="fit">
+  <div class="shell">
+    <div class="section-head">
+      <h2>Read this part before you book</h2>
+      <p>
+        We'd rather lose you here than on week three. This works, but only for a
+        particular kind of family, and it is not the cheap option.
+      </p>
+    </div>
+
+    <div class="fit-grid">
+      <div class="fit-card">
+        <h3>This is for you if</h3>
+        <ul>
+          <li>
+            <svg class="fit-mark" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="10" cy="10" r="9" stroke="#5B5299" stroke-width="1.5"/>
+              <path d="M6 10.2l2.6 2.6L14 7.4" stroke="#5B5299" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>
+              <span class="fit-line">You want a specific grade, by a specific date</span>
+              And you'd like someone to tell you honestly whether it's reachable.
+            </span>
+          </li>
+          <li>
+            <svg class="fit-mark" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="10" cy="10" r="9" stroke="#5B5299" stroke-width="1.5"/>
+              <path d="M6 10.2l2.6 2.6L14 7.4" stroke="#5B5299" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>
+              <span class="fit-line">Your child will show up and work in the session</span>
+              They don't have to love maths. But there's no homework to hide behind, so
+              the hour they're with us is the hour that counts.
+            </span>
+          </li>
+          <li>
+            <svg class="fit-mark" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="10" cy="10" r="9" stroke="#5B5299" stroke-width="1.5"/>
+              <path d="M6 10.2l2.6 2.6L14 7.4" stroke="#5B5299" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>
+              <span class="fit-line">You want evidence, not reassurance</span>
+              Marked past-paper questions every six weeks, and the mark either moved or it didn't.
+            </span>
+          </li>
+          <li>
+            <svg class="fit-mark" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="10" cy="10" r="9" stroke="#5B5299" stroke-width="1.5"/>
+              <path d="M6 10.2l2.6 2.6L14 7.4" stroke="#5B5299" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>
+              <span class="fit-line">You'd rather pay to finish than pay to continue</span>
+              A programme with an end point, not an hourly rate with no horizon.
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="fit-card fit-card--no">
+        <h3>This isn't for you if</h3>
+        <ul>
+          <li>
+            <svg class="fit-mark" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="10" cy="10" r="9" stroke="#8595C4" stroke-width="1.5"/>
+              <path d="M7 7l6 6M13 7l-6 6" stroke="#8595C4" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <span>
+              <span class="fit-line">You're shopping on price</span>
+              We are not the cheapest and we don't try to be. If the hourly rate is the
+              deciding factor, there are plenty of cheaper options and we'd genuinely
+              rather you used one.
+            </span>
+          </li>
+          <li>
+            <svg class="fit-mark" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="10" cy="10" r="9" stroke="#8595C4" stroke-width="1.5"/>
+              <path d="M7 7l6 6M13 7l-6 6" stroke="#8595C4" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <span>
+              <span class="fit-line">You need help with tonight's homework</span>
+              We build towards an exam, not a deadline on Tuesday. A weekly homework
+              helper is a different service.
+            </span>
+          </li>
+          <li>
+            <svg class="fit-mark" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="10" cy="10" r="9" stroke="#8595C4" stroke-width="1.5"/>
+              <path d="M7 7l6 6M13 7l-6 6" stroke="#8595C4" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <span>
+              <span class="fit-line">You're hoping it happens without them engaging</span>
+              We've taken homework out of the equation, which puts all the weight on the
+              sessions themselves. A student who won't engage there won't move.
+            </span>
+          </li>
+          <li>
+            <svg class="fit-mark" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="10" cy="10" r="9" stroke="#8595C4" stroke-width="1.5"/>
+              <path d="M7 7l6 6M13 7l-6 6" stroke="#8595C4" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <span>
+              <span class="fit-line">You want to "try a few sessions and see"</span>
+              A roadmap only works if it's finished. We'd rather start when you're ready
+              to commit to the whole thing.
+            </span>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
-  <div id="journey" class="journey--map gps-bg">
-    <div class="gps-bg__guts">
-      <div class="gps-bg__bg"></div>
-      <div class="gps-bg__route"></div>
-      <div class="gps-bg__marker"></div>
+</section>
+
+<!-- ============================================  L — LABEL  ============= -->
+<section class="section section--tint" id="l">
+  <div class="shell">
+    <div class="section-head">
+      <h2>Sound familiar?</h2>
+      <p>These are the four things parents tell us on almost every call.</p>
     </div>
-    <div class="gps-bg__fade"></div>
-    <div class="journey__guts">
-      <a data-bs-toggle="modal" data-bs-target="#bookACallModal" style="text-decoration: none;">
-        <div class="journey__title__container">
-          <h2 class="journey__title">Guaranteed Results - Fast!</h2>
-          <h4 class="journey__subheading">Get your personalised roadmap today</h4>
-          <p style="color:white;"><em><strong>click</strong> to find out more</em></p>
-        </div>
-      </a>
+
+    <div class="pain-grid">
+      <article class="pain">
+        <svg class="pain-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M12 7v5.4l3.3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <h3>You've been paying for months. The grade hasn't moved.</h3>
+        <p>
+          The sessions happen, the invoices go out, everyone's polite about it. But the
+          last report card looks a lot like the one before, and nobody can quite tell
+          you why.
+        </p>
+      </article>
+
+      <article class="pain">
+        <svg class="pain-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="3.2" y="4.6" width="17.6" height="14.8" rx="2" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M3.2 9.4h17.6M8.4 4.6v14.8" stroke="currentColor" stroke-width="1.6"/>
+        </svg>
+        <h3>It's just more school, after school</h3>
+        <p>
+          Same explanations that didn't land the first time, delivered to a tired
+          fourteen-year-old at six o'clock. If it wasn't working at nine in the morning,
+          it isn't going to work now.
+        </p>
+      </article>
+
+      <article class="pain">
+        <svg class="pain-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 18.5L9 7.5l3.4 7 2.3-3.4L20 18.5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M3 21h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <h3>Nobody's working to a plan</h3>
+        <p>
+          Each week the tutor asks what they're doing in class and teaches that. It
+          feels responsive. It's actually just following the school's timetable at
+          private-tuition prices.
+        </p>
+      </article>
+
+      <article class="pain">
+        <svg class="pain-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="11" cy="11" r="6.6" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M15.8 15.8L21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M11 8.2v3.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <h3>You have no way of telling if it's working</h3>
+        <p>
+          "He's doing really well" is not data. Until the mock results land you're
+          taking it on faith, and by then there isn't much time left to change course.
+        </p>
+      </article>
     </div>
   </div>
-  <div id="google-reviews">
-    <div class="container reviews-section">
-      <div class="reviews-header">
-        <h2>What parents say about MT.O</h2>
-        <div class="reviews-summary">
-          <div class="reviews-stars">
-            ★★★★★
-          </div>
-          <p class="reviews-score">
-            Rated <strong>5.0 out of 5.0</strong> on Google Reviews
+</section>
+
+<!-- ============================================  O — OVERVIEW  ========== -->
+<section class="section" id="o">
+  <div class="shell">
+    <div class="section-head">
+      <h2>What you've probably tried, and why it stalled</h2>
+      <p>
+        Nothing on the left is anyone behaving badly. It's just what happens when a
+        service is sold by the hour: the hour is the product, so nobody is on the hook
+        for where it ends up.
+      </p>
+    </div>
+
+    <div class="oldnew">
+      <div class="oldnew-col oldnew-col--old">
+        <div class="oldnew-head">
+          <h3>Paying for time</h3>
+          <span>the usual arrangement</span>
+        </div>
+        <dl>
+          <dt>Whoever was available</dt>
+          <dd>
+            A general tutor covering maths among other subjects — often a teacher
+            moonlighting, an academic, or a student doing it alongside their degree.
+            Capable people. Not GCSE Maths specialists.
+          </dd>
+
+          <dt>Whatever came up this week</dt>
+          <dd>
+            The lesson is planned in the first five minutes, from whatever the school
+            happened to cover. Gaps from two years ago stay buried, because nothing
+            ever goes looking for them.
+          </dd>
+
+          <dt>No definition of done</dt>
+          <dd>
+            Nobody said at the start what grade you're going for or how long it should
+            take. So it runs until you stop it, and stopping always feels risky.
+          </dd>
+
+          <dt>Feedback by vibes</dt>
+          <dd>
+            A cheerful message after each session. No marked work, no score, no way to
+            compare this month with last month.
+          </dd>
+        </dl>
+      </div>
+
+      <div class="oldnew-col oldnew-col--new">
+        <div class="oldnew-head">
+          <h3>Paying for a grade</h3>
+          <span>how we run it</span>
+        </div>
+        <dl>
+          <dt>GCSE Maths specialists only</dt>
+          <dd>
+            This is the single thing our tutors do. They've taught the same handful of
+            topics to hundreds of students and know precisely where each one breaks
+            down.
+          </dd>
+
+          <dt>A roadmap set before we start</dt>
+          <dd>
+            We diagnose what's actually missing, then map every topic between here and
+            the target grade — including the gaps school has moved past. You see the
+            whole route on day one.
+          </dd>
+
+          <dt>Real past-paper questions as the test</dt>
+          <dd>
+            Progress is measured against genuine exam-board questions, marked to the
+            real mark scheme. Not our own quiz, graded generously. The same questions
+            they'll face in the summer.
+          </dd>
+
+          <dt>A marked result every six weeks</dt>
+          <dd>
+            You get the paper, the mark, and the topics that moved. If something isn't
+            shifting, we find out in week six rather than in March.
+          </dd>
+        </dl>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================  S — SELL THE DREAM  ==== -->
+<section class="section section--navy" id="s">
+  <div class="shell">
+    <div class="dream-grid">
+      <div>
+        <h2>What this actually buys you</h2>
+        <ul class="dream-list">
+          <li>School homework stops being a fight.</li>
+          <li>Lessons at school start making sense again.</li>
+          <li>They stop saying they're "just bad at maths".</li>
+          <li>Results day is a good day.</li>
+        </ul>
+        <p class="dream-after">
+          And the quieter one that parents mention afterwards: the subject stops taking
+          up room in the house. No more Sunday-night dread, no more rows about revision,
+          no more watching them shrink when someone asks how school's going.
+        </p>
+        <a class="btn btn--primary" href="https://api.leadconnectorhq.com/widget/booking/Pa7GsoBAeK1nIxCOvS9R" target="_blank" rel="noopener" data-modal-open>Create my roadmap</a>
+      </div>
+      <figure class="dream-photo" style="margin:0">
+        <img src="images/happy-student.webp" width="1000" height="1000"
+             alt="A student celebrating their exam results" loading="lazy">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================  METHOD  ================ -->
+<section class="section" id="method">
+  <div class="shell">
+    <div class="section-head">
+      <h2>How we teach it: the MAP method</h2>
+      <p>Three passes over every topic, because understanding something once isn't the same as being able to do it under exam conditions.</p>
+    </div>
+    <div class="method-grid">
+      <article class="method-card">
+        <img src="images/master.webp" width="320" height="320" alt="" loading="lazy">
+        <h3><span class="method-letter">M</span>aster</h3>
+        <p>Proper understanding of the topic and of how the questions on it are actually built.</p>
+      </article>
+      <article class="method-card">
+        <img src="images/apply.webp" width="320" height="320" alt="" loading="lazy">
+        <h3><span class="method-letter">A</span>pply</h3>
+        <p>There's a direct link between the number of problems solved in practice and the grade at the end.</p>
+      </article>
+      <article class="method-card">
+        <img src="images/present.webp" width="320" height="320" alt="" loading="lazy">
+        <h3><span class="method-letter">P</span>resent</h3>
+        <p>You can only teach what you fully understand. Explaining it back builds confidence and exposes anything still missing.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================  E — EXPLAIN  =========== -->
+<section class="section section--tint" id="e">
+  <div class="shell">
+    <div class="section-head">
+      <h2>The questions everyone asks</h2>
+    </div>
+
+    <div class="faq">
+      <details>
+        <summary>What does it cost?</summary>
+        <div class="faq-body">
+          <p>
+            It depends on how far your child is from the grade they're aiming at, which
+            is the first thing we work out on the call. It's a programme with a price,
+            not an hourly rate — you'll know the full number, and exactly what it buys,
+            before you decide anything.
+          </p>
+          <p>
+            What we can tell you now: we're not the cheap option, and parents who choose
+            us usually do so having already spent a fair amount on tutoring that didn't
+            move the grade.
           </p>
         </div>
-      </div>
-      <div id="reviews-container" class="reviews-grid">
-        <!-- Cards will be injected here by JavaScript -->
-      </div>
-      <div class="reviews-footer">
-        <a id="reviews-link"
-          href="https://www.google.com/maps/place/Maths+Tutors+Online/@52.1739267,-3.1994142,7.61z/data=!4m8!3m7!1s0x633e25ba1d432b5:0x59c36ebdb945cdc3!8m2!3d47.73855!4d12.5088275!9m1!1b1!16s%2Fg%2F11vl5scr7q?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D"
-          target="_blank"
-          rel="noopener">
-          Read all reviews on Google
-        </a>
+      </details>
 
-        <p class="reviews-updated" id="reviews-updated"></p>
+      <details>
+        <summary>How do I know it's working before it's too late?</summary>
+        <div class="faq-body">
+          <p>
+            Every six weeks your child sits genuine past-paper questions, marked against
+            the real mark scheme. You get the paper back, the mark, and which topics
+            moved. That's the whole point of the six-week cadence — you find out in week
+            six, while there's still time to change something.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What if my child doesn't reach the target?</summary>
+        <div class="faq-body">
+          <p>
+            We add more sessions, at no extra cost, until they get there — and then keep
+            going right up to exam day so they don't slip back. The target is agreed with
+            you on the roadmap call and written down before you pay anything, so there's
+            no ambiguity later about what we promised.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Who actually teaches my child?</summary>
+        <div class="faq-body">
+          <p>
+            An in-house MathsTutors.Online tutor — not a freelancer from a marketplace.
+            Every one holds a maths or closely related degree, and GCSE Maths is the only
+            thing they teach. You can read about all of them further down this page.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>My child has ADHD, autism or dyslexia. Does this work?</summary>
+        <div class="faq-body">
+          <p>
+            Yes, and we teach a lot of students who do. The roadmap is built around what
+            your child specifically is missing, and sessions are adapted to how they
+            work best. Tell us about it on the call so we plan for it properly from the
+            start.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Which exam boards do you cover?</summary>
+        <div class="faq-body">
+          <p>
+            All of them — AQA, Edexcel, OCR, WJEC/Eduqas and the IGCSE variants, and we
+            teach to your child's specification.
+          </p>
+          <p>
+            To be straight with you: the practice questions themselves are drawn from
+            across the boards rather than exclusively from theirs. The maths is identical,
+            and seeing a topic asked three different ways is better preparation than
+            drilling one board's phrasing.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Is it online? Does that work as well as in person?</summary>
+        <div class="faq-body">
+          <p>
+            It's online, and yes. It means your child is taught by a GCSE Maths
+            specialist rather than whoever is willing to drive to your postcode, and
+            everything written during a session is saved and revisitable rather than
+            lost on a scrap of paper.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How much homework is there?</summary>
+        <div class="faq-body">
+          <p>
+            None. We tested it, it didn't improve results, so we stopped setting it.
+          </p>
+          <p>
+            Every session comes with more questions than anyone could get through in the
+            time, so if your child wants extra practice it's already sitting there. But
+            nothing is set, chased or marked between sessions.
+          </p>
+          <p>
+            All we need from your side is that your child can turn up: a reliable internet
+            connection, a quiet space where they won't be interrupted, and someone at your
+            end to handle the admin — the payments, and reading the results when they land.
+          </p>
+        </div>
+      </details>
+    </div>
+
+    <div class="guarantee">
+      <div class="guarantee-bar" aria-hidden="true"></div>
+      <div class="guarantee-in">
+        <h3>Our promise, in one sentence</h3>
+        <p>
+          If your child doesn't reach the target we agree together on your roadmap call,
+          we'll add in more sessions to make sure they get there. Then we'll keep them
+          there until exam day. All at no extra cost.
+        </p>
+        <p style="font-size:.92rem;color:var(--body)">
+          The target is set from their actual starting point, so it's realistic before
+          anyone signs anything. Across every student we've taught, the average
+          improvement is 3.3 grades.
+        </p>
       </div>
     </div>
   </div>
-  <div id="c">
-    <div class="container">
-      <h2 class="h2">Sound Familiar?</h2>
-      <div class="card-container">
-        <div class="bullet">
-          <i class="fa-solid fa-face-sad-tear fa-2xl"></i>
-          <h3>Confidence</h3>
-          <p>Watching your child struggle and skip through their homework in quiet suffering (or sometimes not so quiet...).</p>
+</section>
+
+<!-- ============================================  R — REINFORCE  ========= -->
+<section class="section" id="r">
+  <div class="shell">
+    <div class="section-head">
+      <h2>Don't take our word for it</h2>
+      <p>Three students, in their own words, on video.</p>
+    </div>
+
+    <div class="video-grid">
+      <article class="video-card">
+        <iframe src="https://www.youtube-nocookie.com/embed/My7pGKDGXPU" title="Marcus Rowley on his GCSE Maths tuition" loading="lazy" allowfullscreen></iframe>
+        <div class="video-body">
+          <h4>Marcus Rowley</h4>
+          <span class="jump">Grade 6 &rarr; 9</span>
+          <p>
+            Marcus's grades slipped after a change of maths teacher. We found whole
+            topics — histograms among them — that school had never covered with him. He
+            finished on 100% in his final test.
+          </p>
         </div>
-        <div class="bullet">
-          <i class="fa-solid fa-face-tired fa-2xl"></i>
-          <h3>Anxiety</h3>
-          <p>Dealing with your child's anxiety induced tantrum after getting a bad grade and the fear of failing their exams.</p>
+      </article>
+
+      <article class="video-card">
+        <iframe src="https://www.youtube-nocookie.com/embed/AHdyx2lXZ7M" title="Alfie Eichhorn on his GCSE Maths tuition" loading="lazy" allowfullscreen></iframe>
+        <div class="video-body">
+          <h4>Alfie Eichhorn</h4>
+          <span class="jump">Grade 3/4 &rarr; 6</span>
+          <p>
+            Alfie wasn't keen when his mum suggested tutoring. He went from dreading
+            maths to looking forward to the sessions. In his words: it's the same maths,
+            just better.
+          </p>
         </div>
-        <div class="bullet">
-          <i class="fa-solid fa-face-meh-blank fa-2xl"></i>
-          <h3>Understanding</h3>
-          <p>Hearing that your child doesn't understand what they're learning in Maths at school.</p>
+      </article>
+
+      <article class="video-card">
+        <iframe src="https://www.youtube-nocookie.com/embed/uXpcGnmJhWg" title="Tshepi Mabindisa on her GCSE Maths tuition" loading="lazy" allowfullscreen></iframe>
+        <div class="video-body">
+          <h4>Tshepi Mabindisa</h4>
+          <span class="jump">Grade 7 &rarr; 9</span>
+          <p>
+            Tshepi's school had written her off as a case who'd never get there. She
+            arrived with real determination, and we pointed it at the right topics in
+            the right order.
+          </p>
         </div>
-        <div class="bullet">
-          <i class="fa-solid fa-face-surprise fa-2xl"></i>
-          <h3>Fear</h3>
-          <p>Dealing with the possibility that your child may be separated from their friends if they don't get the grade they need.</p>
-        </div>
-      </div>
+      </article>
     </div>
   </div>
-  <div id="l"></div>
-  <div id="o"></div>
-  <div id="s">
-    <h2 class="h2 mobile-only">Top Marks? In <br>The Bag!</h2>
-    <div class="container container-grid mobile-no-col">
-      <div class="column-50 mobile-no-column-50">
-        <h2 class="h2 desktop-only">Top Marks? In The Bag!</h2>
-        <h4>No need to wish... This is what will happen:</h4>
-        <p>Fears about results day, gone. <br>Fights about revising, gone. <br>Being "bad" at Maths, gone. </p>
-        <img src="/images/happy-student.png" alt="The feeling of smashing your exams" class="mobile-only" style="float: right;">
-        <p>Results day was pure joy, seeing the smile on your child's face as they open that envelope and know that they will be able to go where they want, to study the subjects they hoped to, and most importantly they're staying with their friends... <br>This memory will always stay with you. <br>Although, you're most grateful for seeing the fear and pain go from their eyes when anything related to school is mentioned. Homework stopped being a struggle, lessons at school started making sense, grades across all subjects started going up, and they had more time for fun with the family (and that time was a lot more enjoyable!). That is what you're truly grateful for. </p>
-      </div>
-      <img src="/images/happy-student.png" alt="The feeling of smashing your exams" class="desktop-only">
-    </div>
-  </div>
-  <div id="e">
-    <div class="container">
-      <h2 class="h2">Your Concerns, Sorted!</h2>
-      <div class="card-container">
-        <div class="bullet">
-          <i class="fa-solid fa-question fa-2xl"></i>
-          <h3>Unknown</h3>
-          <p>How do you know what you will get before enrolling? Tutoring can seem like a black box, but no longer. We crack that open for you and explain exactly what you're getting and how!</p>
-        </div>
-        <div class="bullet">
-          <i class="fa-solid fa-money-bill-wave fa-2xl"></i>
-          <h3>Value</h3>
-          <p>Cheap tutoring isn't worth it, what you save in cost up-front you end up paying later when more sessions are needed. So if you're going to part with your hard earned money, you'd better see the results.</p>
-        </div>
-        <div class="bullet">
-          <i class="fa-solid fa-medal fa-2xl"></i>
-          <h3>Quality</h3>
-          <p>Don't take our word for it, or even our qualifications and experience. Make a judgement based on the results & feedback of our previous students.</p>
-        </div>
-        <div class="bullet">
-          <i class="fa-solid fa-hourglass fa-2xl"></i>
-          <h3>Time</h3>
-          <p>Most parents have a weekly tutor for their child, but how do you know how long it will take to get to the point where they are no longer needed? Well, we will tell you that!</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="r">
-    <h2 class="h2">Don't Take Our Word For It!</h2>
-    <div class="container container-grid">
-      <div class="column-50 mobile-no-column-50 review">
-        <h4>Marcus Rowley</h4>
-        <iframe class="video mobile-only" src="https://youtube.com/embed/My7pGKDGXPU"></iframe>
-        <p>Marcus noticed his grades dropping since the change of his Maths teacher last year. After he started year 11 with the same teacher, he knew he needed help to reach his full potential. During his first 6 week program with us Marcus took his grade 6/7 all the way back up to a 9, scoring 100% in our final test. We even found that there were commonly asked questions, such as Histograms, which he hadn't covered in school! <br><strong>"Beneficial!", "Do it!" - Marcus</strong></p>
-      </div>
-      <iframe class="video desktop-only" src="https://youtube.com/embed/My7pGKDGXPU"></iframe>
-    </div>
-    <div class="container container-grid">
-      <iframe class="video desktop-only" src="https://youtube.com/embed/AHdyx2lXZ7M"></iframe>
-      <div class="column-50 mobile-no-column-50 review">
-        <h4>Alfie Eichhorn</h4>
-        <iframe class="video mobile-only" src="https://youtube.com/embed/AHdyx2lXZ7M"></iframe>
-        <p>Alfie was your classic student who was not achieving the marks he could. He hasn't had the support needed to realise his potential and didn't know there was an alternative to typical school Maths. Alfie was aprehensive when his mum mentioned the idea of tutoring but after talking to us, he decided to give it a shot! Since, his attitude towards Maths has completely turned around, from dreading the idea to looking forward to the sessions each week. The change in his confidence, understanding, and general attitude towards Maths been increased further as he came to us at a grade 3/4 and after 6 weeks, bumped that up to a grade 6! <br><strong>"Honestly, go for it!", "It's the same Maths... just better!" - Alfie</strong></p>
-      </div>
-    </div>
-    <div class="container container-grid">
-      <div class="column-50 mobile-no-column-50 review">
-        <h4>Tshepi Mabindisa</h4>
-        <iframe class="video mobile-only" src="https://youtube.com/embed/uXpcGnmJhWg"></iframe>
-        <p>Tshepi is walking proof that anyone can do it. People aren't born either naturally "Mathsy" or not. Like so many others, she was labelled by her school as a "special" case and that she would never make it. She had the desire to improve and came to us with a momentum of positivity & effort, which we then took and pushed it even further. Starting with us at a grade 7 and reaching a grade 9 only 6 weeks later. <br><strong>"You will definitely want to do more!", "I would do this for all of next year!" - Tshepi</strong></p>
-      </div>
-      <iframe class="video desktop-only" src="https://youtube.com/embed/uXpcGnmJhWg"></iframe>
-    </div>
-  </div>
-  <div id="about-us">
-    <h2 class="h2 mobile-only">About Maths Tutors Online</h2>
-    <img class="gif mobile-only" src="/images/mto-cumulative.gif" alt="MT.O's multifaceted approach to success">
-    <div class="container container-grid">
-      <div class="caption column-50">
-      <img class="gif desktop-only" src="/images/mto-cumulative.gif" alt="MT.O's multifaceted approach to success">
-        <p><em>This shows the average relative results achieved using each system alone.</em></p>
-      </div>
-      <div class="column-50">
-        <h2 class="h2 desktop-only" style="text-align: left;">About MathsTutors.Online</h2>
-        <h4>Revolutionising GCSE Maths Tuition</h4>
-        <p>Education is always improving and should be accessible by all, regardless of circumstance. That's what we strive to achieve!<br>Generally, 1:1 private tuition is the single best approach to learning anything, as well as the most expensive. Although, those same results <em>can</em> be achieved at lower costs. <br>Our sole focus is to provide the best possible results, at a fraction the cost of conventional 1:1 tuition. <br><br>MT.O - The one stop shop to get a 9 in your GCSE Maths! <br><br>The journey to achieve the best results at GCSE Maths can vary significantly from student to student. Some need very little explanation, others need a lot. Some need a lot of practice, other's don't. Some need to be held accountable to doing the work, others will to do it on their own. There is no one single path to achieve success, but there is one solution that fits all! That's us!</p>
-      </div>
-    </div>
-    <h2 class="h2">How We Tutor, Our MAP Method Revealed</h2>
-    <div id="parallax-cards" class="wrapper">
-      <div class="cols">
-          <div class="col" ontouchstart="this.classList.toggle('hover');">
-            <div class="container">
-              <div class="front" style="background-image: url(/images/master.png)">
-                <div class="inner">
-                  <p>Master</p>
-                  <span>M</span>
-                </div>
-              </div>
-              <div class="back">
-                <div class="inner">
-                  <p>We ensure true understanding of each topic and how to answer the questions.</p>
-                </div>
-              </div>
-            </div>
+</section>
+
+<!-- ============================================  WALL OF PROOF  ========= -->
+<section class="section section--tint" id="reviews">
+  <div class="shell">
+    <div id="mtoProofWall">
+      <section class="mto-panel">
+        <div class="mto-panel-bar" aria-hidden="true"></div>
+        <div class="mto-panel-in">
+          <div class="mto-label">Real results, real families</div>
+          <h2 class="mto-headline"><span id="mtoCountWord">Hundreds of</span> parents can&rsquo;t be wrong &mdash; here&rsquo;s their proof</h2>
+          <p class="mto-sub">Unedited reviews and messages from parents and students, collected across Google, Trustpilot, email and our own feedback forms. Nothing here is written by us.</p>
+
+          <div class="mto-stats" id="mtoStats">
+            <div class="mto-stat"><span class="mto-stat-n" id="mtoAvg">&mdash;</span><span class="mto-stat-l">Average rating</span></div>
+            <div class="mto-stat"><span class="mto-stat-n" id="mtoTotal">&mdash;</span><span class="mto-stat-l">Reviews</span></div>
+            <div class="mto-stat"><span class="mto-stat-n" id="mtoStudents">&mdash;</span><span class="mto-stat-l">Students helped</span></div>
+            <div class="mto-stat"><span class="mto-stat-n" id="mtoJump">&mdash;</span><span class="mto-stat-l">Average grade jump</span></div>
           </div>
-          <div class="col" ontouchstart="this.classList.toggle('hover');">
-            <div class="container">
-              <div class="front" style="background-image: url(/images/apply.png); background-size: 97%;">
-                <div class="inner">
-                  <p>Apply</p>
-                  <span>A</span>
-                </div>
-              </div>
-              <div class="back">
-                <div class="inner">
-                  <p>There's a direct correlation between number of problems solved in practice and final grade achieved.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col" ontouchstart="this.classList.toggle('hover');">
-            <div class="container">
-              <div class="front" style="background-image: url(/images/present.png)">
-                <div class="inner">
-                  <p>Present</p>
-                  <span>P</span>
-                </div>
-              </div>
-              <div class="back">
-                <div class="inner">
-                  <p>You can only teach something you understand fully. This instills confidence & identifies any remaining gaps.</p>
-                </div>
-              </div>
-            </div>
+        </div>
+      </section>
+
+      <nav class="mto-filters" id="mtoFilters" aria-label="Filter testimonials by category"></nav>
+
+      <div class="mto-scroll-wrap">
+        <div class="mto-scroll" id="mtoScroll" tabindex="0" role="region"
+             aria-label="Reviews from parents and students">
+          <div class="mto-grid" id="mtoGrid"></div>
+
+          <div class="mto-foot">
+            <button type="button" class="mto-more" id="mtoMore">Show more</button>
+            <p class="mto-state" id="mtoState">Loading reviews&hellip;</p>
           </div>
         </div>
+      </div>
+      <p class="mto-scrollhint">Scroll inside the panel to read more, or carry on down the page.</p>
     </div>
-    <div class="gradient-background" style="padding-bottom: 1px;">
-      <h2 id="our-tutors" class="h2">Meet Our Maths Tutors</h2>
-      <div class="container container-grid">
-         <div class="tutor-card column-50 d-flex">
+  </div>
+</section>
+
+<!-- ============================================  ABOUT  ================= -->
+<section class="section" id="about-us">
+  <div class="shell">
+    <div class="about-grid">
+      <figure class="about-figure" style="margin:0">
+        <img src="images/mto-cumulative.gif" alt="Chart showing the relative results achieved by each part of our system" loading="lazy">
+        <figcaption>The average relative results achieved using each part of the system on its own.</figcaption>
+      </figure>
+      <div>
+        <h2>About MathsTutors.Online</h2>
+        <p>
+          One-to-one private tuition is the most effective way to learn almost anything.
+          It's also the most expensive, which is why most families can only afford it in
+          thin slices — an hour here, an hour there, spread across two years.
+        </p>
+        <p>
+          We were founded to get those same results without that trade-off: specialist
+          teaching, a proper plan, and enough structured practice to make it stick, at a
+          fraction of what an equivalent amount of one-to-one would cost.
+        </p>
+        <p>
+          Every student's route is different. Some need very little explaining and a lot
+          of practice; some are the other way round; some mostly need someone keeping
+          them honest. The roadmap is what makes one system fit all of them.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================  TUTORS  ================ -->
+<section class="section section--tint">
+  <div class="shell">
+    <div class="section-head">
+      <h2 id="our-tutors">Meet our maths tutors</h2>
+      <p>
+        In-house, degree-qualified, and GCSE Maths is all they teach. Most of them have
+        their own story about being told they weren't a maths person.
+      </p>
+    </div>
+
+    <div class="people-grid">
+      <article class="person">
+        <img src="images/pawel.webp" width="900" height="900" alt="Pawel rowing a boat beside a waterfall" loading="lazy">
+        <div class="person-body">
           <h3>Pawel</h3>
-          <img src="/images/pawel.png" alt="Picture of Pawel rowing a boat next to a waterfall">
-          <p><strong>BSc Mathematics - University of Plymouth</strong><br>Besides enjoying the rare but beautiful sunshine in Britain’s Ocean City, Pawel studied Mathematics with a focus on education at the University of Plymouth. He started tutoring in his first year and quickly found the thrill in helping students work towards their academic goals. Unlocking that "ah-ha" moment creates such a sense of achievement for him that it blossomed a desire to give everyone that feeling of success and self-belief... If they dare to strive for it! 😅 <br><br><strong>Personality, Hobbies & Interests:</strong><br>Pawel is sporty, adventurous, and always up for a challenge.<br>His main hobby categories are:<br>1 - Bouldering <br>2 - Gym<br>3 - Travelling<br>Pawel enjoys pushing himself in any way he can, whether that's testing his strength and problem solving skills on the wall, to exploring different cultures and stepping out of his comfort zone. It's also made all the more fun by sharing the experiences with friends. Watching football and F1 are two of his favourites, so if that interests you too, feel free to ask him anything on the topic! He has even managed to score himself some free festival tickets by working security and would highly recommend it too!</p>
+          <p class="person-qual">BSc Mathematics — University of Plymouth</p>
+          <p>
+            Studied maths with a focus on education and started tutoring in his first
+            year. He's after the "ah-ha" moment, and he's fairly relentless about
+            getting there.
+          </p>
+          <p class="person-extra" hidden>
+            Sporty, adventurous and always up for a challenge — bouldering, the gym and
+            travelling, plus football and F1 if you want to talk about either.
+          </p>
+          <button class="person-more" type="button" data-more>Read more</button>
         </div>
-        <div class="tutor-card column-50">
+      </article>
+
+      <article class="person">
+        <img src="images/alicia.webp" width="900" height="900" alt="Alicia climbing a mountain" loading="lazy">
+        <div class="person-body">
           <h3>Alicia</h3>
-          <img src="/images/alicia.png" alt="Picture of Alicia climbing a mountain taken from below">
-          <p><strong>BSc Mathematics - Keele University</strong><br>Alicia was told at CGSE that she would never go any further in maths, so she took it upon herself to prove that teacher wrong and do it anyway! Then she went on to train as a qualified teacher and taught in secondary schools. She doesn’t think Maths has to be scary or complicated. Everyone can do it, she's simply here to help them believe that.<br><br><strong>Personality, Hobbies & Interests:</strong><br>When not just living life to fullest with a bundle of energy, great banter and copious amounts of laughter, she also finds time for a few other things.<br>Her main hobby categories are:<br>1 - Reading<br>2 - Sports<br>3 - Travelling<br>If she could leave behind a legacy, it would be of being slightly nutty and definitely kind. She was a crime fiction nut from a very early age and is now dabbling in the fiction based on non-fiction genre now. "It's the best way to get a glimpse into a culture of a place you don't know about". She could watch sports 24/7 and is, unsurprisingly, another football fan! When it comes to playing sports it has to be the team-based ones as forming relationships is what allows her to have a blast.</p>
-         </div>
-      </div>
-      <div class="container container-grid">
-         <div class="tutor-card column-50 d-flex">
+          <p class="person-qual">BSc Mathematics — Keele University</p>
+          <p>
+            Told at GCSE she'd never go further with maths, so she did it anyway, then
+            qualified as a teacher and taught in secondary schools. She doesn't think
+            maths has to be scary; she's here to help students believe that.
+          </p>
+          <p class="person-extra" hidden>
+            Reading, sport and travelling, with a long-standing crime fiction habit and
+            a preference for team sports.
+          </p>
+          <button class="person-more" type="button" data-more>Read more</button>
+        </div>
+      </article>
+
+      <article class="person">
+        <img src="images/kevin.webp" width="900" height="900" alt="Kevin sitting on a camel" loading="lazy">
+        <div class="person-body">
           <h3>Kevin</h3>
-          <img src="/images/kevin.png" alt="Picture of Kevin sat on a camel taking in the moment">
-          <p><strong>BSc Statistics - University College London</strong><br>Kevin loves the thrill of problem-solving and has done since school, always aiming for the Kangaroo or Olympiad awards at the UKMT Maths Challenges. He thrives on giving students access to that problem-solving skill set of his, taking even the most complex of questions and giving students the framework to break them down into clearly laid out bite-sized manageable chunks!<br><br><strong>Personality, Hobbies & Interests:</strong><br>Besides his academic prowess and general charm, Kevin loves to tackle the complex problems, helping others achieve that "aha" moment. <br>His main hobby categories are:<br>1 - Sports<br>2 - Bollywood<br>3 - Travelling<br>When talking about all manner of sports, Kevin has a particular love of football and the gym. When it comes to Bollywood; movies and Punjabi music are a core staple of Kevin's personality. Kevin is also passionate about exploring new cultures, he loves to travel whenever he gets the chance... even if the only method of transport is a camel 🐫</p>
-         </div>
-        <div class="tutor-card column-50">
+          <p class="person-qual">BSc Statistics — University College London</p>
+          <p>
+            A problem-solver since his own school days and the UKMT challenges. His gift
+            is taking a question that looks impossible and breaking it into pieces a
+            student can actually see a way through.
+          </p>
+          <p class="person-extra" hidden>
+            Football and the gym, Bollywood films and Punjabi music, and travelling
+            wherever he can — camels included.
+          </p>
+          <button class="person-more" type="button" data-more>Read more</button>
+        </div>
+      </article>
+
+      <article class="person">
+        <img src="images/oisin.webp" width="900" height="900" alt="Oisín standing in front of a castle" loading="lazy">
+        <div class="person-body">
           <h3>Oisín</h3>
-          <img src="/images/oisin.png" alt="Picture of Oisín excitedly infront of a castle">
-          <p><strong>MSc Astrophysics - Queen's Univeristy Belfast</strong><br>An aspiring poet turned Maths tutor. Oisín's view on Maths changed after his GCSE Maths teacher told him that he was capable, when he thought he was anything but... that moment changed his life, and a few years later, now after graduating top of his year with a Masters in Astrophysics, he feels that it's now his responsibility to show students in the same position he was in, just how achievable being good at Maths really is!<br><br><strong>Personality, Hobbies & Interests:</strong><br>Oisín's a self proclaimed super nerd for the things he's interested in! <br>His three main hobby categories are:<br>1 - Music<br>2 - Chess<br>3 - Art<br>Oisín produces his own music and gets to play it when he's DJing, mainly Jungle and Drum & Bass. But aside from doing things he's good at, he also loves pushing his comfort zones and is currently learning to paint which complements his other artisitic hobby of taking photos of galaxies and nebulae in space using his telescope and motorised mount! </p>
-         </div>
-      </div>
-      <div class="container container-grid">
-        <div class="tutor-card column-50">
+          <p class="person-qual">MSc Astrophysics — Queen's University Belfast</p>
+          <p>
+            An aspiring poet turned maths tutor. His GCSE teacher told him he was capable
+            when he was sure he wasn't; he graduated top of his year, and now considers
+            it his job to do the same for students in that position.
+          </p>
+          <p class="person-extra" hidden>
+            Produces and DJs his own jungle and drum &amp; bass, plays chess, is learning
+            to paint, and photographs galaxies with his own telescope.
+          </p>
+          <button class="person-more" type="button" data-more>Read more</button>
+        </div>
+      </article>
+
+      <article class="person">
+        <img src="images/marlon.webp" width="900" height="900" alt="Marlon sitting on stone steps" loading="lazy">
+        <div class="person-body">
           <h3>Marlon</h3>
-          <img src="/images/marlon.png" alt="Picture of Marlon smiling whilst sat on some stone steps">
-          <p><strong>BSc Mathematics - University of Bath</strong><br>Before settling into his area of expertise in Maths, Marlon also dabbled in Aeropspace Engineering at the University of Bristol. He's well acquainted with both cities and courses, so happy to give any insight.<br><br><strong>Personality, Hobbies & Interests:</strong><br>Marlon loves learning and teaching whenever he has the opportunity, which shows in his range of interests and past experiences of not only tutoring but also instructing Taekwondo and Kickboxing.<br>His main hobby categories are:<br>1 - Physical Activities<br>2 - Learning<br>3 - Food<br>Staying active is a must for Marlon, and enjoys anything that allows him to do that (from the gym to running, cycling, tennis, volleyball, bouldering etc.). On the more creative side, Marlon enjoys playing the piano, teaching himself to trade and program and loves the occasional opportunity to game too. When it comes to food, he would challenge anyone to find a bigger foodie! Just say the word and you'll have an immediate friend 🍦</p>
+          <p class="person-qual">BSc Mathematics — University of Bath</p>
+          <p>
+            Came to maths via aerospace engineering at Bristol, so he's good on the
+            "when would I ever use this" question. He's taught in several settings,
+            including instructing taekwondo and kickboxing.
+          </p>
+          <p class="person-extra" hidden>
+            Endlessly active — gym, running, cycling, tennis, volleyball, bouldering —
+            plus piano, programming and a serious interest in food.
+          </p>
+          <button class="person-more" type="button" data-more>Read more</button>
         </div>
-      </div>
-      <h2 id="our-founders" class="h2" style="padding-top:0px;">Meet Our Student Success Team</h2>
-      <div class="container container-grid">
-         <div class="tutor-card column-50 d-flex">
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================  FOUNDERS  ============== -->
+<section class="section">
+  <div class="shell">
+    <div class="section-head">
+      <h2 id="our-founders">Meet the student success team</h2>
+      <p>The two people you'll speak to before anything starts.</p>
+    </div>
+
+    <div class="people-grid" style="max-width:720px;margin-inline:auto">
+      <article class="person">
+        <img src="images/christian.webp" width="900" height="900" alt="Christian waving in the sunlight" loading="lazy">
+        <div class="person-body">
           <h3>Christian</h3>
-          <img src="/images/christian.jpg" alt="Picture of Christian waving in the sunlight">
-          <p><strong>BSc Physics - University of Bath</strong><br>A-Level Maths grade boundary for an A* is 510/600. Christian achieved 597/600, beating almost every successful Oxbridge candidate at St George's College, Class of 2014. With over a decade of tutoring experience, he's seen nearly everything that can be thrown his way!<br><br><strong>Personality, Hobbies & Interests:</strong><br>Christian is a cheeky chap who loves a good pun and thrives on enthusiasm. <br>His two main hobby categories are:<br>1 - Anything physical (Calisthenics, Powerlifting, Ironman/Triathlon, Basketball, Snowboarding etc.)<br>2 - Learning (Music, Art, Programming, Engineering, Science etc.)<br>Christian has a wide variety of interests that allow him to talk with almost anyone. To find common ground, then use that to bring out their excitement and find a way to make it relevant to the task at hand.</p>
+          <p class="person-qual">BSc Physics — University of Bath</p>
+          <p>
+            Scored 597/600 in A-Level Maths, against a 510 boundary for an A*. Over a
+            decade of tutoring behind him, so there isn't much he hasn't seen a student
+            struggle with.
+          </p>
+          <p class="person-extra" hidden>
+            Calisthenics, powerlifting, triathlon, basketball and snowboarding, plus
+            music, art, programming and engineering. He'll find common ground with
+            almost anyone.
+          </p>
+          <button class="person-more" type="button" data-more>Read more</button>
         </div>
-        <div class="tutor-card column-50">
+      </article>
+
+      <article class="person">
+        <img src="images/millie.webp" width="900" height="900" alt="Millie sitting in the sunlight" loading="lazy">
+        <div class="person-body">
           <h3>Millie</h3>
-          <img src="/images/millie.jpg" alt="Picture of Millie sat in the sunlight">
-          <p><strong>BSc Mathematical Sciences - University of Bath</strong><br>Millie was invited to the exclusive Maths camp run by the UKMT Maths Challenge Award for scoring so highly. Not only this, but she was one of the only females present, one of the only non-private school students, and also the youngest of the camp to attend!<br><br><strong>Personality, Hobbies & Interests:</strong><br>Millie is a sharp, quick-witted young lady who has a never-ending capacity for work. Taking her ADHD personality traits and using them to her advantage! Her two main hobby categories are:<br>1 - Work (Business, selfdevelopment, design, Excel spreadsheets, helping others etc.)<br>2 - Arts & Crafts (from crochet to baking, Millie creates things of beauty!)<br>Millie is passionate and cares deeply about others. Being confident and easygoing helps her to always find a way to make others feel welcomed and relaxed.</p>
-         </div>
-      </div>
-      <!-- <div class="container container-grid">
-       <div class="tutor-card column-50">
-         <h3>Adam</h3>
-         <img src="/images/adam.png" alt="Picture of Adam riding a horse in the sea with his fist in the air">
-         <p>Adam, when it came to maths, was a student who was left behind because of the current state of the education system & the COVID pandemic. Since school Adam has taken his education into his own hands and has seen firsthand just how impactful it has been to his life. That journey sparked a desire to give other people, in a similar situation, the opportunity to see that school/maths is not something to fear, but something they can feel proud about mastering.<br><br><strong>Personality, Hobbies & Interests:</strong><br>Adam is without a doubt a friendly guy, who's calm nature and enthusiasm for life blend into fostering motivation for others to succeed!<br>His main hobby categories are:<br>1 - Fitness & training<br>2 - Personal growth & mindset<br>3 - Storytelling (TV & games)<br>Adam's hobbies help him connect with students to bring out their excitement for life. His encouraging energy helps students feel safe to try and build confidence through seeing the results of their efforts for themselves!</p>
-        </div> -->
-     </div>
-    </div>
-
-  </div>
-  <div id="faqs"></div>
-  <div id="contact-us"></div>
-  <!-- Menu Modal -->
-  <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-body">
-          <li><a href="#navbar" style="color: #041f60"><strong>Create My Roadmap</strong></a></li>
-          <li><a href="#socials">Socials</a></li>
-          <li><a href="#about-us">About Us</a></li>
-          <li><a href="#our-tutors">Our Tutors</a></li>
-          <li><a href="#our-founders">Our Student Success Team</a></li>
+          <p class="person-qual">BSc Mathematical Sciences — University of Bath</p>
+          <p>
+            Invited to the UKMT's selective maths camp for scoring so highly — as one of
+            the few girls there, one of the few state-school students, and the youngest
+            in attendance.
+          </p>
+          <p class="person-extra" hidden>
+            Business, design, spreadsheets and helping people on one side; crochet,
+            baking and making things on the other.
+          </p>
+          <button class="person-more" type="button" data-more>Read more</button>
         </div>
-      </div>
+      </article>
     </div>
   </div>
-  <!-- Airtable Form Modal -->
-  <div class="modal fade" id="bookACallModal" tabindex="-1" aria-labelledby="bookACallModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="bookACallModalLabel" style="color:black;"><a href="https://airtable.com/appBt9tJUbqGrTsXP/pagwm6vlFUF5g23SP/form" target="_blank" style="text-decoration: none;">Book a call</a></h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="embed-responsive">
-            <iframe class="airtable-embed" src="https://airtable.com/embed/appBt9tJUbqGrTsXP/pagwm6vlFUF5g23SP/form" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
+</section>
+
+<!-- ============================================  FINAL CTA  ============= -->
+<section class="section cta-band" id="book-cta">
+  <div class="shell">
+    <h2>Find out what grade is actually reachable</h2>
+    <p>
+      Tell us where your child is now and what you're aiming for. We'll map the route,
+      tell you honestly how long it should take, and you can decide from there.
+    </p>
+    <a class="btn btn--primary" href="https://api.leadconnectorhq.com/widget/booking/Pa7GsoBAeK1nIxCOvS9R" target="_blank" rel="noopener" data-modal-open>Create my roadmap</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================  FOOTER  ================ -->
+<footer class="footer" id="socials">
+  <div class="shell">
+    <div class="footer-grid">
+      <div>
+        <a class="wordmark" href="#hero">Maths<span class="soft">Tutors</span>.Online</a>
+        <ul class="socials">
+          <li><a href="https://www.tiktok.com/@mathstutors.online" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 1 1-1.86-2.48V9.77a5.68 5.68 0 1 0 4.95 5.63V9.01a7.35 7.35 0 0 0 4.28 1.37V7.29a4.28 4.28 0 0 1-3.22-1.47z"/></svg></a></li>
+          <li><a href="https://www.instagram.com/mathstutors.online/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg></a></li>
+          <li><a href="https://www.youtube.com/channel/UC4HGzjGwlZSQT3gRkOdmdog" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.5 7.2a2.7 2.7 0 0 0-1.9-1.9C18.9 4.8 12 4.8 12 4.8s-6.9 0-8.6.5A2.7 2.7 0 0 0 1.5 7.2 28 28 0 0 0 1 12a28 28 0 0 0 .5 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.5 8.6.5 8.6.5s6.9 0 8.6-.5a2.7 2.7 0 0 0 1.9-1.9A28 28 0 0 0 23 12a28 28 0 0 0-.5-4.8zM9.8 15.3V8.7l5.7 3.3z"/></svg></a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=100089104900521" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-legal">
+        <p>MathsTutors.Online PTE. Ltd.</p>
+        <p><a href="mailto:hello@mathstutors.online">hello@mathstutors.online</a></p>
+        <p><a href="https://drive.google.com/file/d/1PvoZTWmFbd_RhxdlXsG72A4VcQ_n2dJ3/view?usp=sharing">Privacy policy</a></p>
       </div>
     </div>
   </div>
-  <footer class="footer" id="socials">
-    <ul class="inline">
-      <li><a href="https://www.tiktok.com/@mathstutors.online" target="_blank"><i class="fa-brands fa-tiktok dark-green-text"></i></i></a></li>
-      <li><a href="https://www.instagram.com/mathstutors.online/" target="_blank"><i class="fa-brands fa-instagram dark-green-text"></i></a></li>
-      <li><a href="https://www.youtube.com/channel/UC4HGzjGwlZSQT3gRkOdmdog" target="_blank"><i class="fa-brands fa-youtube dark-green-text"></i></i></a></li>
-      <li><a href="https://www.facebook.com/profile.php?id=100089104900521" target="_blank"><i class="fa-brands fa-square-facebook dark-green-text"></i></i></a></li>
-    </ul>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <script> //To load google reviews
-  async function loadGoogleReviews() {
-    const container = document.getElementById('reviews-container');
-    const updatedEl = document.getElementById('reviews-updated');
-    const linkEl = document.getElementById('reviews-link');
-    const scoreEl = document.querySelector('.reviews-score'); // NEW
+</footer>
 
-    try {
-      const res = await fetch('/data/reviews.json', { cache: 'no-store' });
+<!-- ============================================  BOOKING MODAL  ========= -->
+<div class="modal-backdrop" id="book" data-open="false" role="dialog" aria-modal="true" aria-labelledby="bookTitle">
+  <div class="modal-box">
+    <div class="modal-top">
+      <h3 id="bookTitle">Create my roadmap</h3>
+      <button class="modal-close" type="button" data-modal-close aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-body">
+      <iframe id="Pa7GsoBAeK1nIxCOvS9R_1789775007394"
+              data-src="https://api.leadconnectorhq.com/widget/booking/Pa7GsoBAeK1nIxCOvS9R"
+              title="Book your roadmap call"
+              allow="payment"></iframe>
+    </div>
+  </div>
+</div>
 
-      if (!res.ok) {
-        throw new Error('Network response was not ok');
-      }
+<!-- ============================================  SCRIPTS  =============== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js" defer></script>
+<!-- LeadConnector: listens for the booking widget's height and resizes the iframe -->
+<script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
 
-      const data = await res.json();
-
-      container.innerHTML = '';
-
-      const reviews = (data.reviews || []).slice(0, 6); // show up to 6
-
-      if (!reviews.length) {
-        container.innerHTML = '<p>No reviews to display yet.</p>';
-        return;
-      }
-
-      reviews.forEach(review => {
-        const card = document.createElement('article');
-        card.className = 'review-card';
-
-        const rating = Number(review.rating) || 0;
-        const fullStars = '★'.repeat(rating);
-        const emptyStars = '☆'.repeat(5 - rating);
-
-        const fullText = (review.text || '').trim();
-
-        const words = fullText.split(/\s+/);
-        const maxWords = 40; // adjust if you want shorter or longer preview
-        const isLong = words.length > maxWords;
-        const shortText = isLong ? words.slice(0, maxWords).join(' ') + '…' : fullText;
-
-        card.innerHTML = `
-          <div class="review-header">
-            <div class="review-author">${review.author_name || 'Parent'}</div>
-            <div class="review-rating">${fullStars}${emptyStars}</div>
-          </div>
-          <p class="review-text">${shortText}</p>
-          ${
-            isLong
-              ? '<a href="#" class="review-more-link">Read more</a>'
-              : ''
-          }
-          <p class="review-meta">${review.relative_time_description || ''}</p>
-        `;
-
-        if (isLong) {
-          const link = card.querySelector('.review-more-link');
-          const textEl = card.querySelector('.review-text');
-          let expanded = false;
-
-          link.addEventListener('click', event => {
-            event.preventDefault();
-            expanded = !expanded;
-
-            textEl.textContent = expanded ? fullText : shortText;
-            link.textContent = expanded ? 'Show less' : 'Read more';
-            card.classList.toggle('expanded', expanded);
-          });
-        }
-
-        container.appendChild(card);
-      });
-
-
-
-      // ✅ Set "Read all X Google reviews"
-      if (linkEl) {
-        const total = Number(data.totalReviews);
-        if (!isNaN(total) && total > 0) {
-          linkEl.textContent = `Read all ${total} Google reviews`;
-        } else {
-          linkEl.textContent = 'Read all reviews on Google';
-        }
-      }
-
-      // ✅ Set "Rated 5.0 out of 5.0 on Google Reviews" dynamically
-      if (scoreEl) {
-        const avgRating = Number(data.rating);
-        const total = Number(data.totalReviews);
-        if (!isNaN(avgRating) && avgRating > 0 && !isNaN(total) && total > 0) {
-          const formatted = avgRating.toFixed(1);
-          scoreEl.innerHTML = `
-            Rated <strong>${formatted} out of 5.0</strong> from <strong>${total}</strong> Google Reviews
-          `;
-        }
-      }
-
-    } catch (err) {
-      console.error('Error loading reviews', err);
-      container.innerHTML = '<p>We could not load reviews right now. Please try again later.</p>';
+<script>
+/* ---------- mobile menu ---------- */
+(function(){
+  var btn = document.querySelector('[data-menu-toggle]');
+  var menu = document.getElementById('mobile-menu');
+  if(!btn || !menu) return;
+  btn.addEventListener('click', function(){
+    var open = menu.getAttribute('data-open') === 'true';
+    menu.setAttribute('data-open', String(!open));
+    btn.setAttribute('aria-expanded', String(!open));
+  });
+  menu.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){
+      menu.setAttribute('data-open','false');
+      btn.setAttribute('aria-expanded','false');
     }
+  });
+})();
+
+/* ---------- booking modal (Airtable iframe loads on first open) ---------- */
+(function(){
+  var modal = document.getElementById('book');
+  if(!modal) return;
+  var frame = modal.querySelector('iframe');
+  var lastFocus = null;
+
+  function open(e){
+    if(e) e.preventDefault();
+    lastFocus = document.activeElement;
+    if(frame && !frame.src) frame.src = frame.getAttribute('data-src');
+    modal.setAttribute('data-open','true');
+    document.body.style.overflow = 'hidden';
+    var close = modal.querySelector('[data-modal-close]');
+    if(close) close.focus();
+  }
+  function close(){
+    modal.setAttribute('data-open','false');
+    document.body.style.overflow = '';
+    if(lastFocus) lastFocus.focus();
   }
 
-  document.addEventListener('DOMContentLoaded', loadGoogleReviews);
+  document.querySelectorAll('[data-modal-open]').forEach(function(el){
+    el.addEventListener('click', open);
+  });
+  modal.querySelectorAll('[data-modal-close]').forEach(function(el){
+    el.addEventListener('click', close);
+  });
+  modal.addEventListener('click', function(e){ if(e.target === modal) close(); });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && modal.getAttribute('data-open') === 'true') close();
+  });
+
+  /* deep link: mathstutors.online/#book opens the form */
+  if(location.hash === '#book') open();
+})();
+
+/* ---------- tutor bio expanders ---------- */
+(function(){
+  document.querySelectorAll('[data-more]').forEach(function(btn){
+    var extra = btn.parentNode.querySelector('.person-extra');
+    if(!extra) return;
+    btn.addEventListener('click', function(){
+      var hidden = extra.hasAttribute('hidden');
+      if(hidden) extra.removeAttribute('hidden'); else extra.setAttribute('hidden','');
+      btn.textContent = hidden ? 'Read less' : 'Read more';
+    });
+  });
+})();
+
+/* ---------- hero proof bar ---------- */
+(function(){
+  var f = window.MTO_FIGURES || {};
+  var students = document.getElementById('barStudents');
+  var jump = document.getElementById('barJump');
+  if(students && f.studentsHelped) students.textContent = f.studentsHelped.toLocaleString('en-GB');
+  if(jump && f.avgGradeJump) jump.innerHTML = '+' + f.avgGradeJump.toFixed(1) + '<span class="unit">grades</span>';
+
+})();
+
+/* ---------- wall of proof ---------- */
+(function(){
+  var CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTjfICw9JgKAlzztn2l-kW7Ap1Mjby8ONV70kRQfL0f6jocTjnAObAQ-vmN0PKG9g/pub?gid=846518672&single=true&output=csv";
+
+  var STUDENTS_HELPED = (window.MTO_FIGURES && window.MTO_FIGURES.studentsHelped) || 1426;
+  var AVG_GRADE_JUMP  = (window.MTO_FIGURES && window.MTO_FIGURES.avgGradeJump)  || 3.3;
+
+  var BATCH = 24;
+
+  var gridEl  = document.getElementById('mtoGrid');
+  var filtEl  = document.getElementById('mtoFilters');
+  var moreEl  = document.getElementById('mtoMore');
+  var stateEl = document.getElementById('mtoState');
+  if(!gridEl) return;
+
+  var ALL = [], VIEW = [], shown = 0, activeCat = 'All';
+
+  function txt(v){ return (v == null ? '' : String(v)).trim(); }
+  function esc(s){ return txt(s).replace(/[&<>"']/g, function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function isTrue(v){ return /^(true|yes|y|1|x|✓)$/i.test(txt(v)); }
+  function num(v){ var n = parseFloat(txt(v)); return isNaN(n) ? null : n; }
+
+  function sourceKey(s){
+    s = txt(s).toLowerCase();
+    if(s.indexOf('google') > -1) return 'google';
+    if(s.indexOf('trust')  > -1) return 'trustpilot';
+    if(s.indexOf('mail')   > -1) return 'email';
+    if(s.indexOf('form') > -1 || s.indexOf('feedback') > -1) return 'form';
+    return 'other';
+  }
+
+  function stars(r){
+    var n = num(r); if(n === null || n < 1) return '';
+    n = Math.max(0, Math.min(5, Math.round(n)));
+    var out = ''; for(var i=0;i<5;i++) out += (i<n ? '★' : '☆');
+    return out;
+  }
+
+  function prettyDate(d){
+    var s = txt(d); if(!s) return '';
+    var m = s.match(/^(\d{4})-(\d{2})-(\d{2})/);
+    if(!m) return s;
+    var months = ['January','February','March','April','May','June',
+                  'July','August','September','October','November','December'];
+    return months[parseInt(m[2],10)-1] + ' ' + m[1];
+  }
+
+  function shuffle(a){
+    for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; }
+    return a;
+  }
+
+  function cardHTML(r){
+    var sk = sourceKey(r.Source);
+    var st = stars(r.Rating);
+    var gb = num(r.GradeBefore), ga = num(r.GradeAfter);
+    var grade = (gb !== null && ga !== null && ga > gb)
+      ? '<div class="mto-grade">Grade ' + gb + ' &rarr; ' + ga + '</div>' : '';
+    return '<article class="mto-card" data-s="' + sk + '">' +
+      '<div class="mto-card-top">' +
+        '<span class="mto-src"><i class="mto-dot" data-s="' + sk + '"></i>' + (esc(r.Source) || 'Review') + '</span>' +
+        (st ? '<span class="mto-stars" aria-label="' + Math.round(num(r.Rating)) + ' out of 5">' + st + '</span>' : '') +
+      '</div>' +
+      '<p class="mto-quote">' + esc(r.Quote) + '</p>' +
+      grade +
+      '<div class="mto-meta">' +
+        '<span class="mto-name">' + (esc(r.Name) || 'Verified customer') + '</span>' +
+        (txt(r.Role) ? '<span class="mto-role">' + esc(r.Role) + '</span>' : '') +
+        (prettyDate(r.Date) ? '<span class="mto-date">' + esc(prettyDate(r.Date)) + '</span>' : '') +
+      '</div>' +
+    '</article>';
+  }
+
+  function renderBatch(){
+    var next = VIEW.slice(shown, shown + BATCH);
+    if(!next.length) return;
+    var frag = document.createElement('div');
+    frag.innerHTML = next.map(cardHTML).join('');
+    while(frag.firstChild) gridEl.appendChild(frag.firstChild);
+    shown += next.length;
+    moreEl.hidden = shown >= VIEW.length;
+  }
+
+  function applyFilter(){
+    VIEW = (activeCat === 'All') ? ALL.slice()
+         : ALL.filter(function(r){ return txt(r.Category) === activeCat; });
+    gridEl.innerHTML = ''; shown = 0;
+    if(typeof scroller !== 'undefined' && scroller) scroller.scrollTop = 0;
+    if(!VIEW.length){
+      stateEl.hidden = false; stateEl.textContent = 'No reviews in this category yet.';
+      moreEl.hidden = true; return;
+    }
+    stateEl.hidden = true;
+    renderBatch();
+  }
+
+  function buildFilters(){
+    var cats = [];
+    ALL.forEach(function(r){ var c = txt(r.Category); if(c && cats.indexOf(c) === -1) cats.push(c); });
+    cats.sort();
+    filtEl.innerHTML = ['All'].concat(cats).map(function(c,i){
+      return '<button type="button" class="mto-chip' + (i===0?' is-on':'') + '" data-cat="' + esc(c) + '">' + esc(c) + '</button>';
+    }).join('');
+    filtEl.addEventListener('click', function(e){
+      var b = e.target.closest('.mto-chip'); if(!b) return;
+      Array.prototype.forEach.call(filtEl.children, function(c){ c.classList.remove('is-on'); });
+      b.classList.add('is-on');
+      activeCat = b.getAttribute('data-cat');
+      applyFilter();
+    });
+  }
+
+  function buildStats(){
+    var rated = ALL.map(function(r){ return num(r.Rating); }).filter(function(n){ return n !== null && n > 0; });
+    var avg = rated.length ? (rated.reduce(function(a,b){return a+b;},0) / rated.length) : null;
+
+    document.getElementById('mtoAvg').innerHTML =
+      avg ? avg.toFixed(1) + '<span class="mto-unit">/5</span>' : '&mdash;';
+    document.getElementById('mtoTotal').textContent    = ALL.length;
+    document.getElementById('mtoStudents').textContent = STUDENTS_HELPED.toLocaleString('en-GB');
+    document.getElementById('mtoJump').innerHTML =
+      '+' + AVG_GRADE_JUMP.toFixed(1) + '<span class="mto-unit">grades</span>';
+
+    document.getElementById('mtoCountWord').textContent = String(ALL.length);
+  }
+
+  /* Deliberately no infinite scroll inside the panel: if it kept loading, the
+     reader could never reach the bottom and the page would never scroll on. */
+  var scroller = document.getElementById('mtoScroll');
+  moreEl.addEventListener('click', renderBatch);
+
+  if(scroller){
+    var wrap = scroller.parentNode;
+    var markEnd = function(){
+      var atEnd = scroller.scrollTop + scroller.clientHeight >= scroller.scrollHeight - 4;
+      wrap.classList.toggle('is-end', atEnd);
+    };
+    scroller.addEventListener('scroll', markEnd, { passive: true });
+    window.addEventListener('resize', markEnd);
+    setTimeout(markEnd, 300);
+  }
+
+  function fail(){
+    stateEl.hidden = false;
+    stateEl.textContent = 'Reviews are loading — please check back shortly.';
+    moreEl.hidden = true;
+  }
+
+  function start(){
+    if(typeof Papa === 'undefined'){ return setTimeout(start, 200); }
+    Papa.parse(CSV_URL, {
+      download: true, header: true, skipEmptyLines: true,
+      complete: function(res){
+        var rows = (res && res.data) ? res.data : [];
+        ALL = rows.filter(function(r){ return r && isTrue(r.Approved) && txt(r.Quote); });
+        if(!ALL.length){ return fail(); }
+        shuffle(ALL);
+        buildStats();
+        buildFilters();
+        applyFilter();
+      },
+      error: fail
+    });
+  }
+
+  /* don't fetch the sheet until the wall is near the viewport */
+  if('IntersectionObserver' in window){
+    var lazy = new IntersectionObserver(function(entries, obs){
+      if(entries[0].isIntersecting){ obs.disconnect(); start(); }
+    }, { rootMargin: '900px 0px' });
+    lazy.observe(document.getElementById('mtoProofWall'));
+  } else {
+    start();
+  }
+})();
 </script>
 </body>
 </html>
