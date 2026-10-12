@@ -615,3 +615,17 @@ img { max-width: 100%; height: auto; display: block; }
 .pullquote--onnavy .pq-context{
   color:#9FAFD4; text-align:left; font-size:.9rem; margin-top:1rem; max-width:none;
 }
+
+/* ---- Longer CTA label ("Book a free diagnostic call") -------------------
+   27 characters instead of 17, so two places need headroom: the nav bar in
+   the band just above the mobile breakpoint, and the button itself on the
+   narrowest phones, where the old padding pushed it past the gutter. */
+
+@media (max-width: 1040px) {
+  .nav-cta { display: none; }      /* was 900px — the longer label crowds the links */
+}
+
+@media (max-width: 420px) {
+  .btn { padding-inline: 1.2rem; font-size: .95rem; }
+  .hero-actions .btn { width: 100%; }
+}

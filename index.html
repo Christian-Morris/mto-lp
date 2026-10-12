@@ -18,6 +18,57 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 
+<!-- Ad-click attribution capture. Runs before anything else so the click IDs
+     are banked even if the visitor leaves before the page finishes loading. -->
+<script>
+(function () {
+  var KEYS = ['gclid','gbraid','wbraid','msclkid','fbclid',
+              'utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
+  var STORE = 'mto_attr';
+  var MAX_AGE_DAYS = 90;          // Google Ads' longest click-through window
+
+  function read()  { try { var r = localStorage.getItem(STORE); return r ? JSON.parse(r) : null; } catch (e) { return null; } }
+  function write(o){ try { localStorage.setItem(STORE, JSON.stringify(o)); } catch (e) {} }
+
+  // Bank anything on the current URL.
+  var q = null;
+  try { q = new URLSearchParams(location.search); } catch (e) {}
+  if (q) {
+    var found = {}, any = false;
+    KEYS.forEach(function (k) {
+      var v = q.get(k);
+      if (v) { found[k] = v; any = true; }
+    });
+    // Overwrite wholesale rather than merging: last click wins, and merging
+    // would stitch a gclid from one campaign onto UTMs from another.
+    // A visit with no parameters writes nothing, so organic and direct
+    // returns never wipe a stored ad click.
+    if (any) {
+      found._t  = Date.now();
+      found._lp = location.pathname;
+      write(found);
+    }
+  }
+
+  window.MTO_ATTR = function () {
+    var d = read();
+    if (!d) return {};
+    if (Date.now() - (d._t || 0) > MAX_AGE_DAYS * 86400000) return {};
+    var out = {};
+    KEYS.forEach(function (k) { if (d[k]) out[k] = d[k]; });
+    return out;
+  };
+
+  // Returns `base` with the stored parameters appended.
+  window.MTO_ATTR_URL = function (base) {
+    var a = window.MTO_ATTR(), u;
+    try { u = new URL(base, location.href); } catch (e) { return base; }
+    Object.keys(a).forEach(function (k) { u.searchParams.set(k, a[k]); });
+    return u.toString();
+  };
+})();
+</script>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SE0MMX2Y45"></script>
 <script>
@@ -51,7 +102,7 @@
           <li><a href="#e">Questions</a></li>
           <li><a href="#about-us">About us</a></li>
         </ul>
-        <a class="btn btn--primary btn--sm nav-cta" href="https://api.leadconnectorhq.com/widget/booking/Pa7GsoBAeK1nIxCOvS9R" target="_blank" rel="noopener" data-modal-open>Create my roadmap</a>
+        <a class="btn btn--primary btn--sm nav-cta" href="https://api.leadconnectorhq.com/widget/booking/Pa7GsoBAeK1nIxCOvS9R" target="_blank" rel="noopener" data-modal-open>Book a free diagnostic call</a>
         <button class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
           <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true">
             <path d="M0 1h20M0 7h20M0 13h20" stroke="currentColor" stroke-width="2"/>
@@ -71,7 +122,7 @@
         <li><a href="#e">Questions</a></li>
         <li><a href="#about-us">About us</a></li>
       </ul>
-      <a class="btn btn--primary" href="https://api.leadconnectorhq.com/widget/booking/Pa7GsoBAeK1nIxCOvS9R" target="_blank" rel="noopener" data-modal-open style="width:100%">Create my roadmap</a>
+      <a class="btn btn--primary" href="https://api.leadconnectorhq.com/widget/booking/Pa7GsoBAeK1nIxCOvS9R" target="_blank" rel="noopener" data-modal-open style="width:100%">Book a free diagnostic call</a>
     </div>
   </div>
 </header>
@@ -93,7 +144,7 @@
           moving. Our students average a 3.3 grade jump.
         </p>
         <div class="hero-actions">
-          <a class="btn btn--primary" href="https://api.leadconnectorhq.com/widget/booking/Pa7GsoBAeK1nIxCOvS9R" target="_blank" rel="noopener" data-modal-open>Create my roadmap</a>
+          <a class="btn btn--primary" href="https://api.leadconnectorhq.com/widget/booking/Pa7GsoBAeK1nIxCOvS9R" target="_blank" rel="noopener" data-modal-open>Book a free diagnostic call</a>
           <a class="btn btn--ghost" href="#o">See how this is different</a>
         </div>
         <p class="hero-note">
@@ -116,11 +167,11 @@
           <span class="stat-l">Average Google rating</span>
         </div>
         <div class="stat">
-          <span class="stat-n">162<span class="unit">+</span></span>
+          <span class="stat-n">160<span class="unit">+</span></span>
           <span class="stat-l">Google reviews</span>
         </div>
         <div class="stat">
-          <span class="stat-n" id="barStudents">1,426<span class="unit">+</span></span>
+          <span class="stat-n" id="barStudents">1,426</span>
           <span class="stat-l">Students taught</span>
         </div>
         <div class="stat">
@@ -431,7 +482,7 @@
           up room in the house. No more Sunday-night dread, no more rows about revision,
           no more watching them shrink when someone asks how school's going.
         </p>
-        <a class="btn btn--primary" href="https://api.leadconnectorhq.com/widget/booking/Pa7GsoBAeK1nIxCOvS9R" target="_blank" rel="noopener" data-modal-open>Create my roadmap</a>
+        <a class="btn btn--primary" href="https://api.leadconnectorhq.com/widget/booking/Pa7GsoBAeK1nIxCOvS9R" target="_blank" rel="noopener" data-modal-open>Book a free diagnostic call</a>
       </div>
       <figure class="dream-photo" style="margin:0">
         <img src="images/happy-student.webp" width="1000" height="1000"
@@ -511,7 +562,7 @@
           <p>
             We add more sessions, at no extra cost, until they get there — and then keep
             going right up to exam day so they don't slip back. The target is agreed with
-            you on the roadmap call and written down before you pay anything, so there's
+            you on the diagnostic call and written down before you pay anything, so there's
             no ambiguity later about what we promised.
           </p>
         </div>
@@ -593,7 +644,7 @@
       <div class="guarantee-in">
         <h3>Our promise, in one sentence</h3>
         <p>
-          If your child doesn't reach the target we agree together on your roadmap call,
+          If your child doesn't reach the target we agree together on your diagnostic call,
           we'll add in more sessions to make sure they get there. Then we'll keep them
           there until exam day. All at no extra cost.
         </p>
@@ -888,7 +939,7 @@
       Tell us where your child is now and what you're aiming for. We'll map the route,
       tell you honestly how long it should take, and you can decide from there.
     </p>
-    <a class="btn btn--primary" href="https://api.leadconnectorhq.com/widget/booking/Pa7GsoBAeK1nIxCOvS9R" target="_blank" rel="noopener" data-modal-open>Create my roadmap</a>
+    <a class="btn btn--primary" href="https://api.leadconnectorhq.com/widget/booking/Pa7GsoBAeK1nIxCOvS9R" target="_blank" rel="noopener" data-modal-open>Book a free diagnostic call</a>
   </div>
 </section>
 
@@ -925,13 +976,13 @@
 <div class="modal-backdrop" id="book" data-open="false" role="dialog" aria-modal="true" aria-labelledby="bookTitle">
   <div class="modal-box">
     <div class="modal-top">
-      <h3 id="bookTitle">Create my roadmap</h3>
+      <h3 id="bookTitle">Book a free diagnostic call</h3>
       <button class="modal-close" type="button" data-modal-close aria-label="Close">&times;</button>
     </div>
     <div class="modal-body">
       <iframe id="Pa7GsoBAeK1nIxCOvS9R_1789775007394"
               data-src="https://api.leadconnectorhq.com/widget/booking/Pa7GsoBAeK1nIxCOvS9R"
-              title="Book your roadmap call"
+              title="Book your free diagnostic call"
               allow="payment"></iframe>
     </div>
   </div>
@@ -971,7 +1022,13 @@
   function open(e){
     if(e) e.preventDefault();
     lastFocus = document.activeElement;
-    if(frame && !frame.src) frame.src = frame.getAttribute('data-src');
+    if(frame && !frame.src){
+      /* Append the stored ad-click parameters so GHL records attribution
+         against the booking. The iframe's own URL is what GHL reads, which
+         is why the parent page's parameters never reached it before. */
+      var base = frame.getAttribute('data-src');
+      frame.src = (window.MTO_ATTR_URL ? window.MTO_ATTR_URL(base) : base);
+    }
     modal.setAttribute('data-open','true');
     document.body.style.overflow = 'hidden';
     var close = modal.querySelector('[data-modal-close]');
@@ -985,6 +1042,11 @@
 
   document.querySelectorAll('[data-modal-open]').forEach(function(el){
     el.addEventListener('click', open);
+    /* These anchors point straight at the booking page for the no-JS and
+       open-in-new-tab cases, so they need the parameters too. */
+    if(window.MTO_ATTR_URL && el.getAttribute('href')){
+      el.setAttribute('href', window.MTO_ATTR_URL(el.getAttribute('href')));
+    }
   });
   modal.querySelectorAll('[data-modal-close]').forEach(function(el){
     el.addEventListener('click', close);
