@@ -23,6 +23,7 @@
 <script>
 (function () {
   var KEYS = ['gclid','gbraid','wbraid','msclkid','fbclid',
+              'gad_source','gad_campaignid',          // Google also sends these
               'utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
   var STORE = 'mto_attr';
   var MAX_AGE_DAYS = 90;          // Google Ads' longest click-through window
@@ -30,24 +31,39 @@
   function read()  { try { var r = localStorage.getItem(STORE); return r ? JSON.parse(r) : null; } catch (e) { return null; } }
   function write(o){ try { localStorage.setItem(STORE, JSON.stringify(o)); } catch (e) {} }
 
-  // Bank anything on the current URL.
-  var q = null;
-  try { q = new URLSearchParams(location.search); } catch (e) {}
-  if (q) {
-    var found = {}, any = false;
-    KEYS.forEach(function (k) {
-      var v = q.get(k);
-      if (v) { found[k] = v; any = true; }
-    });
+  function paramsFrom(str) {
+    var out = {};
+    if (!str) return out;
+    try {
+      var q = new URLSearchParams(str);
+      KEYS.forEach(function (k) { var v = q.get(k); if (v) out[k] = v; });
+    } catch (e) {}
+    return out;
+  }
+
+  // Bank anything on the current URL — query string first.
+  var found = paramsFrom(location.search), any = Object.keys(found).length > 0;
+
+  // Then the fragment. When an ad's final URL already ends in "#something",
+  // the click ID can land AFTER the hash ("/#hero?gclid=X", or "/#gclid=X"),
+  // where location.search is empty and the query string alone sees nothing.
+  var h = location.hash || '';
+  var qi = h.indexOf('?');
+  var hashQuery = qi > -1 ? h.slice(qi + 1)
+                : (h.indexOf('=') > -1 ? h.slice(1) : '');
+  var fromHash = paramsFrom(hashQuery);
+  Object.keys(fromHash).forEach(function (k) {
+    if (!found[k]) { found[k] = fromHash[k]; any = true; }
+  });
+
+  if (any) {
     // Overwrite wholesale rather than merging: last click wins, and merging
     // would stitch a gclid from one campaign onto UTMs from another.
     // A visit with no parameters writes nothing, so organic and direct
     // returns never wipe a stored ad click.
-    if (any) {
-      found._t  = Date.now();
-      found._lp = location.pathname;
-      write(found);
-    }
+    found._t  = Date.now();
+    found._lp = location.pathname;
+    write(found);
   }
 
   window.MTO_ATTR = function () {
@@ -1019,9 +1035,25 @@
   var frame = modal.querySelector('iframe');
   var lastFocus = null;
 
+  /* Put the stored click IDs back on the parent page's own URL before the
+     widget loads. GHL's form_embed.js reports the parent URL into the iframe,
+     and GHL's attribution may read that rather than the iframe's query string.
+     replaceState adds no history entry, so the back button is unaffected. */
+  function syncParentUrl(){
+    if(!window.MTO_ATTR || !window.history || !history.replaceState) return;
+    try {
+      var a = window.MTO_ATTR(), u = new URL(location.href), changed = false;
+      Object.keys(a).forEach(function(k){
+        if(u.searchParams.get(k) !== a[k]){ u.searchParams.set(k, a[k]); changed = true; }
+      });
+      if(changed) history.replaceState(null, '', u.toString());
+    } catch(e){}
+  }
+
   function open(e){
     if(e) e.preventDefault();
     lastFocus = document.activeElement;
+    syncParentUrl();
     if(frame && !frame.src){
       /* Append the stored ad-click parameters so GHL records attribution
          against the booking. The iframe's own URL is what GHL reads, which
